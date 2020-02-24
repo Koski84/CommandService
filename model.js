@@ -15,7 +15,10 @@ const AdvertSchema = new mongoose.Schema({
   km: { type: String },
   color: { type: String },
   fabricant: { type: String },
-  imageIds: [{ type: Number }]
+  images: [{ 
+    url: { type: String, required: true },
+    quality: { type: String, required: true }
+  }]
 })
 
 const Advert = mongoose.model('Advert', AdvertSchema)
