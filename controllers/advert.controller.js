@@ -1,5 +1,5 @@
 require('dotenv').config('.env')
-const request = require('request-promise')
+const scoreAdvert = require('../services/scoring.service')
 const advertService = require('../services/advert.kafka-producer.service')
 
 exports.postAdvert = async function (req, res) {
@@ -15,9 +15,4 @@ exports.postAdvert = async function (req, res) {
   } catch (e) {
     return res.status(400).json({ status: 400, message: e.message })
   }
-}
-
-async function scoreAdvert (advert) {
-  const response = await request(process.env.SCORE_SERVICE_URI, { body: advert, json: true })
-  return response.data
 }
