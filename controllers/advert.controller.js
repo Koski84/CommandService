@@ -1,5 +1,6 @@
-const advertService = require('./service')
+require('dotenv').config('.env')
 const request = require('request-promise')
+const advertService = require('../services/advert.kafka-producer.service')
 
 exports.postAdvert = async function (req, res) {
   try {
