@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Koski84/CommandService#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "kafka-node": "^5.0.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
